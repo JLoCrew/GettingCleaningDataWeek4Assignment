@@ -29,3 +29,10 @@ The variable that was looked up and appended as a new column is as such:
   ActivityType
   
 The original data sources are from the 'test' and 'train' files
+
+The transformations done include the following:
+a) appending the test and train files with the SubjectID that are found in the subject file
+b) appending the test and train files with column headings that are found in the Y files
+c) augment the test and train files using rbind
+d) select attributes by column headings; specifically, those that contain "mean" and "std"
+e) Calculate mean of each attribute by combination of SubjectID and ActivityID
